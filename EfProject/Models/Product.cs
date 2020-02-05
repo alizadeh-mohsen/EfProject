@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace EfProject.Models
 {
@@ -16,9 +15,7 @@ namespace EfProject.Models
         public string Variety { get; set; }
         public decimal? Price { get; set; }
         public string Status { get; set; }
-        public bool Perishable { get; set; }
-        public int? ExpirationDays { get; set; }
-        public bool? Refrigerated { get; set; }
+
 
         public virtual ICollection<OrderItem> OrderItem { get; set; }
     }

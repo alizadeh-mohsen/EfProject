@@ -9,8 +9,10 @@ namespace EfProject
         static void Main(string[] args)
         {
             var context = new HPlusSportsContext();
-            var salesPersons = context.Salesperson.Where(s => s.LastName.StartsWith("s"));
-            salesPersons.ToList().ForEach(s => Console.WriteLine(s.FullName));
+            var p = context.Perishables.Distinct().ToList();
+            p.ForEach(p => Console.WriteLine($"ExpirationDays= {p.ExpirationDays}" +
+                                       $" Refrigerated={p.Refrigerated}" +
+                                       $" Name={ p.ProductName} "));
 
             Console.ReadKey();
 

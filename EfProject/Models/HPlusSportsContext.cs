@@ -19,6 +19,7 @@ namespace EfProject.Models
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<SalesGroup> SalesGroup { get; set; }
         public virtual DbSet<Salesperson> Salesperson { get; set; }
+        public virtual DbSet<Perishable> Perishables { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -176,6 +177,10 @@ namespace EfProject.Models
                    entity.Property(e => e.Variety)
                        .HasMaxLength(50)
                        .IsUnicode(false);
+
+                   entity.HasDiscriminator<bool>("Perishable")
+                       .HasValue<Product>(false)
+                       .HasValue<Perishable>(true);
                });
             #endregion
 
