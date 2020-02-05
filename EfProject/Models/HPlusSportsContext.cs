@@ -198,11 +198,11 @@ namespace EfProject.Models
              {
                  entity.Property(e => e.SalespersonId).HasColumnName("SalespersonID");
 
-                 entity.Property(e => e.Address)
+                 entity.Property<string>("Address")
                      .HasMaxLength(50)
                      .IsUnicode(false);
 
-                 entity.Property(e => e.City)
+                 entity.Property<string>("City")
                      .HasMaxLength(50)
                      .IsUnicode(false);
 
@@ -229,11 +229,11 @@ namespace EfProject.Models
 
                  entity.Property(e => e.SalesGroupType).HasDefaultValueSql("((1))");
 
-                 entity.Property(e => e.State)
+                 entity.Property<string>("State")
                      .HasMaxLength(50)
                      .IsUnicode(false);
 
-                 entity.Property(e => e.Zipcode)
+                 entity.Property<string>("Zipcode")
                      .HasMaxLength(50)
                      .IsUnicode(false);
 
