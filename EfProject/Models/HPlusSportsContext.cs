@@ -41,42 +41,42 @@ namespace EfProject.Models
                        .IsUnicode(false)
                        .HasComputedColumnSql("(([str_fld_LastName]+', ')+[str_fld_FirstName])");
 
-                   entity.Property(e => e.StrFldAddress)
+                   entity.Property(e => e.Address)
                        .HasColumnName("str_fld_Address")
                        .HasMaxLength(50)
                        .IsUnicode(false);
 
-                   entity.Property(e => e.StrFldCity)
+                   entity.Property(e => e.City)
                        .HasColumnName("str_fld_City")
                        .HasMaxLength(50)
                        .IsUnicode(false);
 
-                   entity.Property(e => e.StrFldEmail)
+                   entity.Property(e => e.Email)
                        .HasColumnName("str_fld_Email")
                        .HasMaxLength(50)
                        .IsUnicode(false);
 
-                   entity.Property(e => e.StrFldFirstName)
+                   entity.Property(e => e.FirstName)
                        .HasColumnName("str_fld_FirstName")
                        .HasMaxLength(50)
                        .IsUnicode(false);
 
-                   entity.Property(e => e.StrFldLastName)
+                   entity.Property(e => e.LastName)
                        .HasColumnName("str_fld_LastName")
                        .HasMaxLength(50)
                        .IsUnicode(false);
 
-                   entity.Property(e => e.StrFldPhone)
+                   entity.Property(e => e.Phone)
                        .HasColumnName("str_fld_Phone")
                        .HasMaxLength(50)
                        .IsUnicode(false);
 
-                   entity.Property(e => e.StrFldState)
+                   entity.Property(e => e.State)
                        .HasColumnName("str_fld_State")
                        .HasMaxLength(50)
                        .IsUnicode(false);
 
-                   entity.Property(e => e.StrFldZipcode)
+                   entity.Property(e => e.Zipcode)
                        .HasColumnName("str_fld_Zipcode")
                        .HasMaxLength(50)
                        .IsUnicode(false);

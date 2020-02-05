@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace EfProject.Models
 {
@@ -11,14 +10,14 @@ namespace EfProject.Models
         }
 
         public int CustomerId { get; set; }
-        public string StrFldFirstName { get; set; }
-        public string StrFldLastName { get; set; }
-        public string StrFldEmail { get; set; }
-        public string StrFldPhone { get; set; }
-        public string StrFldAddress { get; set; }
-        public string StrFldCity { get; set; }
-        public string StrFldState { get; set; }
-        public string StrFldZipcode { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Zipcode { get; set; }
         public string CmpLastFirst { get; set; }
 
         public virtual ICollection<Order> Order { get; set; }
